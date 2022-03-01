@@ -1,4 +1,5 @@
 require_relative "../config/environment.rb"
+require 'pry'
 
 class Student
 
@@ -67,7 +68,6 @@ class Student
     result = DB[:conn].execute(sql, name)[0]
     Student.new(result[0], result[1], result[2])
   end
-
 
 
 end
